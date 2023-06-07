@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-# Trajectory arrayCords
+# Trajectory array Coords
 
 
 tracker = cv2.legacy.TrackerCSRT_create()
@@ -44,7 +44,7 @@ def goalTrack(img, bbox):
     # Get the CENTER Points of the Bounding Box
 
     
-    # Append the center points c1 and c2 to xCords and yCords respectively
+    # Append the center points c1 and c2 to xCoords and yCoords respectively
 
 
 

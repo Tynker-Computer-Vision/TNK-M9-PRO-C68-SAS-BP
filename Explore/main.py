@@ -10,8 +10,8 @@ goalX = 200
 goalY = 70
 
 
-xCords = []
-yCords = []
+xCoords = []
+yCoords = []
 
 
 tracker = cv2.legacy.TrackerCSRT_create()
@@ -67,11 +67,11 @@ def goalTrack(img, bbox):
         cv2.putText(img, "Goal", (300, 90),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-    xCords.append(c1)
-    yCords.append(c2)
+    xCoords.append(c1)
+    yCoords.append(c2)
 
-    for i in range(len(xCords)-1):
-        cv2.circle(img, (xCords[i], yCords[i]), 2, (0, 0, 255), 5)
+    for i in range(len(xCoords)-1):
+        cv2.circle(img, (xCoords[i], yCoords[i]), 2, (0, 0, 255), 5)
 
 
 while True:

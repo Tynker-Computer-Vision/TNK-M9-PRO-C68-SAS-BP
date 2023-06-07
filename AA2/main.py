@@ -5,8 +5,8 @@ import math
 goalX = 200
 goalY = 70
 
-xCords = []
-yCords = []
+xCoords = []
+yCoords = []
 
 tracker = cv2.legacy.TrackerCSRT_create()
 
@@ -63,16 +63,16 @@ def goalTrack(img, bbox):
         cv2.putText(img, "Goal", (300, 90),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-    xCords.append(c1)
-    yCords.append(c2)
+    xCoords.append(c1)
+    yCoords.append(c2)
 
-    for i in range(len(xCords)-1):
+    for i in range(len(xCoords)-1):
         # Remove the line to create a circle as trajectory
-        cv2.circle(img, (xCords[i], yCords[i]), 1, (0, 0, 255), 2)
+        cv2.circle(img, (xCoords[i], yCoords[i]), 1, (0, 0, 255), 2)
 
         # Check if i>0 and only then draw the line
 
-        # Draw line from xCords[i], yCords[i] to (xChords[i-1], ychords[i-1])
+        # Draw line from xCoords[i], yCoords[i] to (xChords[i-1], ychords[i-1])
 
 
 while True:
